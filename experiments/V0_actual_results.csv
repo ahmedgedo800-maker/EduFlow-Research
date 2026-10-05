@@ -1,0 +1,2 @@
+version,run,performance_score,fcp_s,lcp_s,tbt_ms,cls,speed_index_s,notes
+V0,1,57,8.5,15.1,60,0,8.5,"Measured with Lighthouse on localhost:5173; screenshot evidence included."

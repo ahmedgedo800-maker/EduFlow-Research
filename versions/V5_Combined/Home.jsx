@@ -1,0 +1,5 @@
+import React from "react";
+import {Link} from "react-router-dom";
+import {BarChart3} from "lucide-react";
+import {Card,courses} from "./common.jsx";
+export default function Home(){return <><section className="hero"><div className="container hero-grid"><div><span className="eyebrow">LEARN • BUILD • GROW</span><h1>Learn skills that move your career forward.</h1><p>EduFlow is a research-oriented e-learning interface used to evaluate practical web performance optimization techniques.</p><div className="actions"><Link className="btn primary" to="/courses">Explore courses</Link><Link className="btn ghost" to="/dashboard">Dashboard</Link></div></div><div className="hero-panel"><BarChart3 size={42}/><h3>Performance Research</h3><p>The same application is measured before and after controlled optimizations.</p></div></div></section><section className="container section"><div className="section-head"><div><span className="eyebrow">POPULAR</span><h2>Featured courses</h2></div><Link to="/courses">View all</Link></div><div className="grid">{courses.slice(0,4).map((c,i)=><Card key={c[0]} c={c} priority={i===0}/>)}</div></section></>}

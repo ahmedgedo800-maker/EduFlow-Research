@@ -1,0 +1,6 @@
+import{c as o,r as s,a as r,R as a,C as u}from"./index-9tnc5Prx.js";/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const p=o("Search",[["circle",{cx:"11",cy:"11",r:"8",key:"4ej97u"}],["path",{d:"m21 21-4.3-4.3",key:"1qie3q"}]]);function d(){const[c,l]=s.useState(""),[t,n]=s.useState("All"),m=["All",...new Set(r.map(e=>e[2]))],i=s.useMemo(()=>r.filter(e=>(t==="All"||e[2]===t)&&e[1].toLowerCase().includes(c.toLowerCase())),[c,t]);return a.createElement("main",{className:"container section"},a.createElement("div",{className:"page-head"},a.createElement("span",{className:"eyebrow"},"COURSE LIBRARY"),a.createElement("h1",null,"Explore courses"),a.createElement("p",null,"Search and filter the catalog.")),a.createElement("div",{className:"filters"},a.createElement("div",{className:"search"},a.createElement(p,{size:18}),a.createElement("input",{value:c,onChange:e=>l(e.target.value),placeholder:"Search courses..."})),a.createElement("div",{className:"chips"},m.map(e=>a.createElement("button",{className:t===e?"chip active":"chip",onClick:()=>n(e),key:e},e)))),a.createElement("div",{className:"grid"},i.map(e=>a.createElement(u,{key:e[0],c:e}))))}export{d as default};

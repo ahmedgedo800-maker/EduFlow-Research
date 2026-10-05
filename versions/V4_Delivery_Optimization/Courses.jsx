@@ -1,0 +1,4 @@
+import React,{useMemo,useState} from "react";
+import {Search} from "lucide-react";
+import {Card,courses} from "./common.jsx";
+export default function Courses(){const[q,setQ]=useState(""),[cat,setCat]=useState("All"),cats=["All",...new Set(courses.map(c=>c[2]))],filtered=useMemo(()=>courses.filter(c=>(cat==="All"||c[2]===cat)&&c[1].toLowerCase().includes(q.toLowerCase())),[q,cat]);return <main className="container section"><div className="page-head"><span className="eyebrow">COURSE LIBRARY</span><h1>Explore courses</h1><p>Search and filter the catalog.</p></div><div className="filters"><div className="search"><Search size={18}/><input value={q} onChange={e=>setQ(e.target.value)} placeholder="Search courses..."/></div><div className="chips">{cats.map(x=><button className={cat===x?"chip active":"chip"} onClick={()=>setCat(x)} key={x}>{x}</button>)}</div></div><div className="grid">{filtered.map(c=><Card key={c[0]} c={c}/>)}</div></main>}

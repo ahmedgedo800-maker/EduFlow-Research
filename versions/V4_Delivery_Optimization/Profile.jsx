@@ -1,0 +1,1 @@
+import React from "react"; import {User} from "lucide-react"; export default function Profile(){return <main className="container section"><span className="eyebrow">ACCOUNT</span><h1>Profile</h1><div className="card panel profile"><User size={42}/><div><h2>Alex Morgan</h2><p>Computer Science Student</p><p>Interested in web development and data science.</p></div></div></main>}

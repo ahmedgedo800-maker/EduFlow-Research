@@ -1,4 +1,4 @@
-# EduFlow — Web Performance Research Project
+# EduFlow — Web Performance Optimization Research Project
 
 ## Research Title
 
@@ -6,34 +6,13 @@
 
 ## Overview
 
-EduFlow is a React-based educational web application developed as an independent research prototype.
+EduFlow is an independent research project developed to experimentally evaluate modern web performance optimization techniques in a React-based educational web application.
 
-The project investigates the effects of modern web performance optimization techniques by evaluating the same application under multiple experimental configurations.
-
-The study evaluates:
-
-- Image Optimization
-- Lazy Loading
-- Code Splitting
-- Delivery Optimization
-- Combined Optimization
-
-The application was evaluated using Google Lighthouse under a controlled mobile-emulation environment.
-
-## Research Objectives
-
-The project aims to:
-
-1. Develop a realistic React-based educational web application.
-2. Establish an unoptimized baseline configuration.
-3. Apply performance optimization techniques incrementally.
-4. Measure the effect of each experimental configuration.
-5. Compare the resulting performance metrics.
-6. Analyze whether combining optimization techniques provides additional benefits.
+The study compares six experimental configurations, from an intentionally unoptimized baseline to a combined optimization version.
 
 ## Experimental Versions
 
-| Version | Configuration |
+| Version | Optimization |
 |---|---|
 | V0 | Baseline |
 | V1 | Image Optimization |
@@ -42,9 +21,11 @@ The project aims to:
 | V4 | Delivery Optimization |
 | V5 | Combined Optimizations |
 
+Each configuration was evaluated using **five Lighthouse runs**.
+
 ## Evaluation Metrics
 
-The experiments use the following Lighthouse metrics:
+The experiment measures:
 
 - Performance Score
 - First Contentful Paint (FCP)
@@ -53,57 +34,84 @@ The experiments use the following Lighthouse metrics:
 - Cumulative Layout Shift (CLS)
 - Speed Index
 
-Five Lighthouse runs were performed for each experimental configuration.
+## Main Finding
+
+Under the tested experimental conditions, **V2 (Lazy Loading)** produced the lowest mean FCP, LCP, TBT, and Speed Index among the six configurations.
+
+Compared with V0:
+
+- FCP improved by approximately **1.0%**
+- LCP improved by approximately **0.9%**
+- TBT improved by approximately **16.3%**
+- Speed Index improved by approximately **1.0%**
+
+These findings are specific to the tested application and experimental environment.
+
+## Application Screenshots
+
+### Home Page
+
+![EduFlow Home](01-home.png)
+
+### Courses
+
+![EduFlow Courses](02-courses.png)
+
+### Course Details
+
+![EduFlow Course Details](03-course-details.png)
+
+### Student Dashboard
+
+![EduFlow Dashboard](04-dashboard.png)
+
+## Research Paper
+
+The complete research paper is available here:
+
+**[EduFlow Research Paper](EduFlow_Research.pdf)**
 
 ## Experimental Environment
 
-- Application: EduFlow
-- Framework: React
-- Build Tool: Vite
-- Evaluation Tool: Lighthouse 13.5.0
-- Browser: Headless Chrome 155
-- Form Factor: Mobile emulation
-- Screen: 412 × 823
+- React
+- Vite
+- Node.js
+- Chrome Headless
+- Lighthouse 13.5.0
+- Mobile emulation
+- 412 × 823 viewport
 - CPU slowdown: 4×
-- Network RTT: 150 ms
-- Network throughput: 1638.4 Kbps
+- Network throttling applied during Lighthouse testing
 
-## Main Findings
+## Reproducibility
 
-Under the tested experimental conditions, V2 (Lazy Loading) produced the lowest mean FCP, LCP, TBT, and Speed Index among the evaluated configurations.
+The repository contains:
 
-Compared with the baseline V0, V2 showed approximately:
-
-- 1.0% lower FCP
-- 0.9% lower LCP
-- 16.3% lower TBT
-- 1.0% lower Speed Index
-
-The results are specific to the EduFlow application and experimental environment and should not be interpreted as universal performance rankings.
+- Source code
+- Experimental versions
+- Lighthouse experiment results
+- Scripts used for experiments
+- Research documentation
+- Research paper
+- Application screenshots
 
 ## My Contribution
 
-I independently worked on the EduFlow research project, including:
+This project was independently developed as a research project for an **Open Doors Scholarship application**.
 
-- Designing the experimental web application.
-- Implementing the React application.
-- Preparing the experimental configurations.
-- Implementing the evaluated optimization techniques.
-- Running the Lighthouse performance measurements.
-- Collecting and organizing the experimental results.
-- Analyzing the measured performance metrics.
-- Preparing the accompanying research documentation and paper.
+The work includes:
 
-## Project Structure
+- Research topic definition
+- React application development
+- Experimental design
+- Performance optimization implementations
+- Lighthouse-based measurements
+- Results analysis
+- Research paper preparation
+- Documentation and reproducibility materials
 
-```text
-EduFlow-Research/
-├── eduflow-app/
-├── versions/
-├── experiments/
-├── research/
-├── evidence/
-├── docs/
-├── scripts/
-├── README.md
-└── README_AR.md
+## Academic Context
+
+This is an **Independent Research Project** prepared in support of an Open Doors Scholarship application.
+
+It does not claim to be an awarded Master's thesis, an institutional Master's research project, or a published paper.
